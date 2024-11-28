@@ -25,3 +25,34 @@ function randomColor(){
 }
 
 randomColor();
+
+
+const colorEls = [
+    "white", "black", "red", "green", "blue", "yellow", "magenta", "cyan", "silver",
+    "gray", "maroon", "olive", "darkgreen", "purple", "tomato", "gold", "brown", 
+    "deeppink", "navy", "saddlebrown", "chartreuse", "chocolate", "crimson", "darkgreen",
+    "firebrick", "limegreen", "darkorange", "darkkhaki", "mediumblue", "blueviolet", 
+    "lightpink", "lightblue", "lightsalmon", "lightgreen", "lightcoral", "darkslategray", 
+    "slateblue", "forestgreen", "darkviolet", "orangered", "mediumorchid", "lightgoldenrodyellow",
+    "lightseagreen", "mediumslateblue", "darkred", "yellowgreen", "lightsteelblue", 
+    "mediumaquamarine", "paleturquoise", "lavender", "mistyrose", "peachpuff", "powderblue",
+    "darkorange", "seashell", "darkcyan", "indigo", "darkturquoise", "midnightblue", 
+    "dodgerblue", "lightpink", "snow", "slategray", "seashell", "thistle", "mediumseagreen",
+    "papayawhip", "tomato", "royalblue", "indianred", "springgreen", "lightyellow", 
+    "darkslateblue", "cornflowerblue", "mediumspringgreen", "peru", "greenyellow", 
+    "darkgoldenrod", "rebeccapurple", "slateblue", "deepskyblue", "lightskyblue", 
+    "mediumvioletred", "plum", "hotpink", "antiquewhite", "lightgray", "lightslategray", 
+    "darkorchid", "lightpink", "fuchsia", "rosybrown", "palevioletred", "orangered"
+]
+function changeNavarColor(){
+    const navEl = document.querySelector('nav');
+    const colorText = document.querySelector('h1');
+    
+    navEl.addEventListener('mouseenter', function(){
+        let randomElement = Math.floor(Math.random() * colorEls.length);
+        console.log(colorEls[randomElement]);
+        navEl.style.backgroundColor = colorEls[randomElement];
+        colorText.textContent = colorEls[randomElement];
+    })
+}
+changeNavarColor();
